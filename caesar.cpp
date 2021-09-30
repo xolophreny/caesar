@@ -17,15 +17,15 @@ int main() {
 	for (std::wstring::iterator it=str.begin(); it!=str.end(); ++it) {
 		if ( (*it) < 91 && (*it) > 64 ) { //if character is latin uppercase
 			if ( ((*it)+key) < 65 ) { //wrapping from A to Z
-				std::wcout << (wchar_t)( 91 - (65 - (*it)+key));
+				std::wcout << (wchar_t)( 91 - (65 - ((*it)+key)));
 			} else if ( ((*it)+key) > 90 ) { //wrapping from Z to A
-				std::wcout << (wchar_t)( 64 + ( (*it)+key - 90));
+				std::wcout << (wchar_t)( 64 + ( ((*it)+key) - 90));
 			} else std::wcout << (wchar_t)((*it)+key); //no wrapping
 		} else if ( (*it) < 123 && (*it) > 96 ) { //if character is latin lowercase
 			if ( ((*it)+key) < 97 ) { //wrapping from a to z
-				std::wcout << (wchar_t)( 123 - (97 - (*it)+key));
+				std::wcout << (wchar_t)( 123 - (97 - ((*it)+key)));
 			} else if ( ((*it)+key) > 122 ) { //wrapping from z to a
-				std::wcout << (wchar_t)( 96 + ( (*it)+key - 122));
+				std::wcout << (wchar_t)( 96 + ( ((*it)+key) - 122));
 			} else std::wcout << (wchar_t)((*it)+key); //no wrapping
 		} else std::wcout << (wchar_t)(*it); //if character is something else
 	}

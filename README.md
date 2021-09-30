@@ -8,7 +8,7 @@
 
 ### Сборка
 
-Компилировать `caesar.cpp`, например: `g++ caesar.cpp -o caaesar`
+Компилировать `caesar.cpp`, например: `g++ caesar.cpp -o caesar`
 
 ### Запуск
 
